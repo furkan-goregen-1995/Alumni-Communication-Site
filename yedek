@@ -1,0 +1,36 @@
+              $menusorgu=mysqli_query($baglan,"select * from menuler");
+
+while($menucek=mysqli_fetch_assoc($menusorgu))
+
+{
+
+?>  
+            <li class=""><a href=<?php echo $menucek['tablo_menuurl']; ?>><?php echo $menucek['tablo_menuad'];?></a></li>
+
+
+        <?php 
+
+
+}
+
+$menusorgu=mysqli_query($baglan,"select * from menuler");
+
+while($menucek=mysqli_fetch_assoc($menusorgu))
+
+{
+
+?>  
+            <li class=""><a href=<?php echo $menucek['tablo_menuurl']; ?>><?php echo $menucek['tablo_menuad'];?></a></li>
+
+
+<?php
+
+} 
+
+
+ <li class=""><a href="bossayfa.php">Profil Sayfam</a></li>
+
+<li class=""><a href="formgruplarim.php?id=<?php echo $uye_id ; ?>">Form Gruplarım</a></li>
+<li class=""><a href="mesajlarim.php?id=<?php echo $uye_id?>">Mesajlarım</a></li>
+<li class=""><a href="ara.php">Profil Ara</a></li>
+<li class=""><a href="logout.php">CIKIS</a></li>
